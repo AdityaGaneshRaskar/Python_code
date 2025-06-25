@@ -1,0 +1,43 @@
+''' Simple calculator '''
+
+# defining operations
+
+def add(a,b):
+    return a+b
+
+def sub(a,b):
+    return a-b
+
+def multiply(a,b):
+    return a*b
+
+def divide(a,b):
+    if b==0:
+        return "error"
+    return a/b
+
+# operation menu
+print("choose operation")
+print("1.addition")
+print("2.substraction")
+print("3.multiplication")
+print("4.division")
+
+select=int(input("enter your choice 1,2,3,4:\n"))
+
+# taking input of numbers
+x=float(input("enter the number1:"))
+y=float(input("enter the number2:"))
+
+# calling function
+if select==1:
+    print("addition is:",add(x,y))
+elif select==2:
+    print("substraction is:",sub(x,y))
+elif select==3:
+    print("multiplication is:",multiply(x,y))
+else:
+    if select==4:
+        print("division is:", divide(x, y))
+
+
