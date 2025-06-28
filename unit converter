@@ -1,0 +1,124 @@
+'''unit converter'''
+
+def lenght():
+    print("lenght units: centimeter(cm),meter(m),kilometer(km)")
+    value=float(input("enter value you have to convert:"))
+    from_unit=input("enter value from where to convert:").lower()
+    to_unit=input("enter value to where to convert:").lower()
+
+    meter= {
+        'cm':0.01,
+        'm':1,
+        'km':1000
+    }
+
+    if from_unit in meter and to_unit in meter:
+        result=value*meter[from_unit]/meter[to_unit]
+        a=print(f"{value}{from_unit}={result:.4f}{to_unit}")
+    return a
+
+def weight():
+    print("weight unit: gram(gm),kilogram(kg)")
+    value=float(input("enter value you have to convert:"))
+    from_unit = input("enter value from where to convert:").lower()
+    to_unit = input("enter value to where to convert:").lower()
+
+    gram={
+        'gm':1,
+        'kg':1000
+    }
+
+    if from_unit in gram and to_unit in gram:
+        result=value*gram[from_unit]/gram[to_unit]
+        b=print(f"{value}{from_unit}={result:.2f}{to_unit}")
+    return b
+
+def temperature():
+    print("Temperature units: celcius(C),fahrenheit(F),kelvin(K)")
+    value = float(input("enter value you have to convert:"))
+    from_unit = input("enter value from where to convert:").upper()
+    to_unit = input("enter value to where to convert:").upper()
+
+    result=None
+
+    if from_unit=='C':
+        if to_unit=='K':
+            result=(value+273)
+        elif to_unit=='F':
+            result=(value*9/5)+32
+        else:
+            result=value
+    elif from_unit=='K':
+        if to_unit=='C':
+            result=(value-273)
+        elif to_unit=='F':
+            result=(value-273)*9/5+32
+        else:
+            result=value
+    elif from_unit=='F':
+        if to_unit=='C':
+            result=(value-32)*5/9
+        elif to_unit=='K':
+            result=(value-32)*9/5+273
+        else:
+            result=value
+    else:
+        print("invalid unit")
+        return
+    print(f"{value}{from_unit}={result:.2f}{to_unit}")
+
+def volume():
+    print("volume units: litre(l),millilitre(ml)")
+    value = float(input("enter value you have to convert:"))
+    from_unit = input("enter value from where to convert:").lower()
+    to_unit = input("enter value to where to convert:").lower()
+
+    vol={
+        'l':1,
+        'ml':0.001
+    }
+
+    if from_unit in vol and to_unit in vol:
+        result = value * vol[from_unit] /vol[to_unit]
+        c = print(f"{value}{from_unit}={result:.2f}{to_unit}")
+    return c
+
+def main():
+    while True:
+        print("\nSelect what to convert:")
+        print("1.lenght")
+        print("2.weight")
+        print("3.temperature")
+        print("4.volume")
+        print("5.exit")
+
+        select=int(input("enter the conversion you want:"))
+
+        if select==1:
+            lenght()
+        elif select==2:
+            weight()
+        elif select==3:
+            temperature()
+        elif select==4:
+            volume()
+        elif select==5:
+            print("Goodbye,visit again")
+            break
+
+
+
+if __name__ == '__main__':
+    main()
+
+
+
+
+
+
+
+
+
+
+
+
