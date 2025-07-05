@@ -1,5 +1,8 @@
 '''Palindrome checker'''
 
+''' IMP=string[start : stop : step]
+'''
+
 text=input("enter the string:")
 
 if text==text[::-1]:
