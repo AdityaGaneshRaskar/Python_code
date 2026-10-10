@@ -1,0 +1,7 @@
+# Extraction of last digit:
+
+numb=int(input("enter the number:"))
+while numb>0:
+  last_digit=numb%10
+  print(last_digit)
+  numb=numb//10
