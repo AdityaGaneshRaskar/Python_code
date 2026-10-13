@@ -1,7 +1,31 @@
-# Extraction of last digit:
+''' Extraction of last digit:'''
 
 numb=int(input("enter the number:"))
 while numb>0:
   last_digit=numb%10
   print(last_digit)
   numb=numb//10
+
+''' Extraction of digit ascending :'''
+
+# using for loop:
+
+numb1=str(input("enter the number:"))
+for i in numb1:
+  print(i)
+
+#using While loop:
+
+numb2=int(input("enter the number:"))
+divisor=1
+while numb2//divisor>=10:
+  divisor=divisor*10
+
+while numb2>0:
+  first_digit=numb2//divisor
+  print(first_digit)
+  numb2=numb2%divisor
+  divisor=divisor//10
+  
+
+
