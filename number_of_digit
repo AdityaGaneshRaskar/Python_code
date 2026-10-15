@@ -1,0 +1,34 @@
+'''using len function'''
+numb=int(input("enter the number:"))
+  str_numb=str(numb)
+  count=len(str_numb)
+  print(count)
+
+'''using while loop'''
+numb=5445 
+numb=int(input("enter the number:"))
+count=0
+while numb>0:
+  numb=numb//10
+  count+=1
+print(count)
+
+'''defining function'''
+def counter(n):
+  count=0
+  while n>0:
+    n=n//10
+    count+=1
+ return count
+numb=int(input("enter the number:"))
+a=counter(numb)
+print(a)
+
+'''using math library'''
+from math import *
+def counter(n):
+  count=int(log10(n))+1
+  return count
+numb=54565
+func=counter(numb)
+print(func)
