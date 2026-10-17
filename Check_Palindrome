@@ -1,0 +1,20 @@
+#converting to string:
+numb=int(input("enter the number:"))
+str_numb=str(numb)
+if str_numb==str_numb[::-1]:
+  print(True)
+else:
+  print(False)
+
+# Using while loop:
+numb=4574
+n=numb
+result=0
+while n>0:
+  last_digit=n%10
+  result=(result*10)+last_digit
+  n=n//10
+print(n==result)
+
+  
+  
